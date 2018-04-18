@@ -29,12 +29,22 @@
     //     console.log(search);
     //   })
     // })
-    function search(){
+    // function search(){
+    //     var search=$('#input_name').val();
+    //     console.log(search);
+    //     $.get(
+    //         'http://devvm.com/api/api.php?name='+search, function(data){
+    //           $('.content').html(data.database);
+    //           // 要用data.来调用json数据，所以要在另一个php中生成json
+    //         }
+    //       )
+        function search(){
         var search=$('#input_name').val();
         console.log(search);
         $.get(
-            'http://devvm.com/api/api.php?name='+search, function(data){
-              $('.content').html(data.data);
+            'http://devvm.com/api/product.php?name='+search, function(data){
+              $('.content').html(data.database);
+              // 要用data.来调用json数据，所以要在另一个php中生成json
             }
           )
         // $.post(
