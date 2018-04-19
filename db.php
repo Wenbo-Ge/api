@@ -10,7 +10,6 @@
 		return $this->conn;
 	}
 
-//按照这个方法重新写一个templates.php,在里面定义一个类来写api，参考mvc3/templates/get方法
 	
 
 	public function getAllItemsReturnArrById($id){

@@ -10,8 +10,8 @@ function response($status,$status_message,$data){
 	$response['database']=$data;
 	$response['time']='18.04.18';
 
-	$json_response=json_encode($response);
-	echo $json_response;
+	// $json_response=json_encode($response);
+	// echo $json_response;
 }
 	
 	
