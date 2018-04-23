@@ -14,8 +14,7 @@ function response($status,$status_message,$data){
 	echo $json_response;
 }
 	
-	
-	
+	// 为什么不加一个$_GET['action']==
 if (!empty($_GET['name'])) {
 	$name=$_GET['name'];
 	$price=get_price($name);

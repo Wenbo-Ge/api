@@ -10,7 +10,14 @@
 		return $this->conn;
 	}
 
-	
+	public function addItem($name,$quantity){
+		$stmt=$this->getConnInstance()->prepare('INSERT INTO product(p_name,p_quantity) VALUES(:name,:quantity)');
+		$result=$stmt->execute(array(
+			':name'=>$name,
+			':quantity'=>$quantity
+		));
+		return $result;
+	}
 
 	public function getAllItemsReturnArrById($id){
 		$stmt=$this->getConnInstance()->prepare('SELECT * FROM product WHERE p_id=:id');
@@ -23,15 +30,6 @@
 				'quantity'=>$result['p_quantity']
 		);
 		return $json;
-	}
-
-	public function addItem($name,$quantity){
-		$stmt=$this->getConnInstance()->prepare('INSERT INTO product(p_name,p_quantity) VALUES(:name,:quantity)');
-		$result=$stmt->execute(array(
-			':name'=>$name,
-			':quantity'=>$quantity
-		));
-		return $result;
 	}
 
 	public function updateItem ($id,$quantity){

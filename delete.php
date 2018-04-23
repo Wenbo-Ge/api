@@ -18,7 +18,7 @@ function response($status,$status_message,$data){
 	
 	
 	
-if (!empty($_GET['id'])) {
+if ($_GET['action']=='delete' && !empty($_GET['id'])) {
 	$id=$_GET['id'];
 	$conn=new DBConnection();
 	$new=$conn->deleteItem($id);

@@ -16,7 +16,7 @@ function response($status,$status_message,$data){
 	
 	
 	
-if (!empty($_GET['id'])) {
+if ($_GET['action']=='product' && !empty($_GET['id'])) {
 	$id=$_GET['id'];
 	$conn=new DBConnection();
 	$quantity=$conn->getAllItemsReturnArrById($id);

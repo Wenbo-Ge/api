@@ -17,7 +17,7 @@ function response($status,$status_message,$data){
 	
 	
 	
-if (!empty($_GET['name']) && !empty($_GET['quantity'])) {
+if ($_GET['action']=='add' && !empty($_GET['name']) && !empty($_GET['quantity'])) {
 	$name=$_GET['name'];
 	$quantity=$_POST['quantity'];
 	$conn=new DBConnection();
