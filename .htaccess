@@ -1,5 +1,5 @@
 RewriteEngine On
-# ^后面定义url的形式(用正则表达式)
+# ^后面定义url的形式(用正则表达式)要熟悉RegExp
 
 # 为什么第一个重写不需要有action=？一个文件就不需要
 RewriteRule ^api/([a-zA-Z_-]*)$ api.php?name=$1 [NC,L]
